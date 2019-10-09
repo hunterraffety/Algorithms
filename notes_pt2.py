@@ -16,7 +16,7 @@ def fib(n):
     else:
         return fib(n - 1) + fib(n - 2)
 
-print(dynamic_fib(32))
+print(dynamic_fib(900))
 print(fib(32))
 
 print(cache)
