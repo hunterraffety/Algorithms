@@ -17,7 +17,6 @@
 
 # complexity is how fast your code runs
 
-​
 def quicksort(items):
     if len(items) <= 1:
         return items
@@ -35,11 +34,7 @@ def quicksort(items):
             right.append(item)
     # 4. While LHS and RHS are greater than 1, repeat steps 1-3 on each side.
     return quicksort(left) + [pivot] + quicksort(right)
-​
-​
-​
-​
-​
+
 def insertion_sort(items):
     # Split the list into sorted and unsorted
     # For each element in unsorted...
@@ -59,13 +54,13 @@ def insertion_sort(items):
         items[j] = temp
         # print(f"counter: {counter}")
     return items
-​
+
 l = list(range(1000))
 random.shuffle(l)
 # insertion_sort(l)
-​
-​
-​
+
+
+
 def bubble_sort(items):
     has_swapped = False
     for i in range(len(items) - 1):
@@ -79,11 +74,11 @@ def bubble_sort(items):
         return bubble_sort(items)
     else:
         return items
-​
-​
-​
-​
-​
+
+
+
+
+
 def merge(arrA, arrB):
     '''
     Take 2 sorted arrays and merge them into a single
@@ -112,8 +107,8 @@ def merge(arrA, arrB):
             merged_arr[i] = arrB[b]
             b += 1
     return merged_arr
-​
-​
+
+
 def merge_sort(arr):
     '''
     Take an unsorted list, return a sorted list
@@ -129,34 +124,34 @@ def merge_sort(arr):
         right_sorted = merge_sort(right_half)
         # Merge the sorted halves
         return merge(left_sorted, right_sorted)
-​
-​
+
+
 list = [2, 4, 3, 0, 1, 5, 8, 7, 9, 6]
 merge_sort(list)
-​
-​
-​
-​
-​
+
+
+
+
+
 from time import time
-​
+
 l = [random.randint(0, 1000) for i in range(0, 100000)]
-​
-​
+
+
 lists = []
 for i in range(1, 10):
     l = [random.randint(0, 1000) for i in range(0, i * 1000)]
     lists.append(l)
-​
-​
+
+
 # start_time = time()
 # # Run our code
 # quicksort(l)
 # # Store the ending time
 # end_time = time()
 # print (f"{end_time - start_time} seconds")
-​
-​
+#
+# ​​
 insertion_sort_times = {}
 for l in lists:
     start_time = time()
@@ -165,9 +160,9 @@ for l in lists:
     # Store the ending time
     end_time = time()
     insertion_sort_times[len(l)] = end_time - start_time
-​
+
 print(insertion_sort_times)
-​
-​
+
+
 for key in insertion_sort_times:
     print(insertion_sort_times[key])
