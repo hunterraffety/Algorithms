@@ -3,9 +3,14 @@
 import argparse
 
 def find_max_profit(prices):
-  for x in prices:
-    print(x)
-  pass
+  # max profit so far by default is going to be the first buy
+  # you're able to make.
+  max_profit_so_far = prices[1] - prices[0]
+  # for x in prices:
+  #   print(x)
+  # need to begin a loop to iterate through prices
+  for i in range(0, len(prices)):
+    print(f"prices: {prices[i]}")
 
 print(find_max_profit([1050, 270, 1540, 3800, 2]))
 
