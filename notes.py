@@ -16,7 +16,8 @@
 #  - Improve on some previous first pass solutions
 
 # complexity is how fast your code runs
-
+import random
+items = [1, 54, 6, 6, 3,32, 34, 6]
 def quicksort(items):
     if len(items) <= 1:
         return items
@@ -55,7 +56,8 @@ def insertion_sort(items):
         # print(f"counter: {counter}")
     return items
 
-l = list(range(1000))
+
+l = [2, 4, 3, 0, 1, 5, 8, 7, 9, 6]
 random.shuffle(l)
 # insertion_sort(l)
 
@@ -162,6 +164,7 @@ for l in lists:
     insertion_sort_times[len(l)] = end_time - start_time
 
 print(insertion_sort_times)
+
 
 
 for key in insertion_sort_times:
