@@ -15,6 +15,8 @@ def find_max_profit(prices):
     for j in range(i + 1, len(prices)): # offset by one for new loop
       print(f"prices: inner i {prices[i]}, inner j {prices[j]}")
       #seems like nested loops are confusing.
+      max_profit = prices[j] - prices[i] #this loops through and subtracts i from j
+      print(max_profit)
 print(find_max_profit([1050, 270, 1540, 3800, 2]))
 
 
