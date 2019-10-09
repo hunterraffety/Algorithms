@@ -9,9 +9,12 @@ def find_max_profit(prices):
   # for x in prices:
   #   print(x)
   # need to begin a loop to iterate through prices
-  for i in range(0, len(prices)):
-    print(f"prices: {prices[i]}")
-
+  for i in range(len(prices)):
+    print(f"prices: outer {prices[i]}")
+    #begin second loop to begin calculations
+    for j in range(i + 1, len(prices)): # offset by one for new loop
+      print(f"prices: inner i {prices[i]}, inner j {prices[j]}")
+      #seems like nested loops are confusing.
 print(find_max_profit([1050, 270, 1540, 3800, 2]))
 
 
