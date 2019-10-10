@@ -24,15 +24,21 @@ def recipe_batches(recipe, ingredients):
   #   pass
   #   # print(k)
   # pass
+  # these are not in the same order
   batches = 0
-
+  can_make = 0
   for key, value in recipe.items():
     print(key, value)
     if key in ingredients:
       print(ingredients[key], value)
       #i am able to see both values in the recipe and ingredients now. at this point 
-  # these are not in the same order
-
+      batches = ingredients[key] / value
+      print(f"batches: {batches}")
+      if batches < 1:
+        can_make = 0
+      else:
+        can_make += 1
+      return can_make
 if __name__ == '__main__':
   # Change the entries of these dictionaries to test 
   # your implementation with different inputs
