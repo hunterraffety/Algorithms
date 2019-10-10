@@ -13,17 +13,19 @@ def recipe_batches(recipe, ingredients):
   # can they make? Think about what if you have enough to
   # make two batches worth of one ingredient but not of
   # another.
-  recipe_requirements = set(recipe.values())
-  ingredients_requirements = set(ingredients.values())
-  test = set(recipe_requirements).intersection(set(ingredients_requirements))
-  for i in recipe_requirements:
-    print(i)
-  for j in ingredients_requirements:
-    print(j)
-  for k in test:
-    pass
-    # print(k)
-  pass 
+  # recipe_requirements = set(recipe.values())
+  # ingredients_requirements = set(ingredients.values())
+  # test = set(recipe_requirements).intersection(set(ingredients_requirements))
+  # for i in recipe_requirements:
+  #   print(i)
+  # for j in ingredients_requirements:
+  #   print(j)
+  # for k in test:
+  #   pass
+  #   # print(k)
+  # pass
+  for key, value in recipe.items():
+    print(key, value)
   # these are not in the same order
 
 if __name__ == '__main__':
