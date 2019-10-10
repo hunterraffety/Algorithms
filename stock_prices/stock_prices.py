@@ -9,7 +9,7 @@ def find_max_profit(prices):
   # for x in prices:
   #   print(x)
   # need to begin a loop to iterate through prices
-  for i in range(len(prices)):
+  for i in range(len(prices) - 1):
     #print(f"prices: outer {prices[i]}")
     #begin second loop to begin calculations
     for j in range(i + 1, len(prices)): # offset by one for new loop

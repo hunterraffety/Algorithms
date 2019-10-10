@@ -29,20 +29,25 @@ def recipe_batches(recipe, ingredients):
   # i need to set an amount for the MAXIMUM amount of batches
   max_batches = 0
   # i need to determine if they can make
-  can_make = 0
+  can_make = []
+  if len(recipe) != len(ingredients):
+    return 0
   for key, value in recipe.items():
     print(key, value)
     if key in ingredients:
       print(ingredients[key], value)
-      #i am able to see both values in the recipe and ingredients now. at this point 
-      has_enough = ingredients[key] // value
+      #i am able to see both values in the recipe and ingredients now. at this point
+      has_enough = ingredients[key] // value  # // value
+      can_make.append(has_enough)
       print(f"has_enough calc: {has_enough}")
       # if this guy is less than 1 for any of the cases, then he can't make a batch
       #if batches < 1:
       #if 'has_enough' is less than one for any ingredient, they can't make a batch
-    else:
-      max_batches = 0
-
+    # else:
+    #   max_batches = 0
+  #else:
+      
+    return min(can_make)
       # assertion error on the test. need to do a return of some sort if 0 batches can be made?
       #this is the wrong comparison. It's returning the wrong math on just one entry. 100/132 is 1.32 which is what batches turns out to be.
 if __name__ == '__main__':
