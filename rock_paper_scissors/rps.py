@@ -24,3 +24,27 @@ if __name__ == "__main__":
     print(rock_paper_scissors(num_plays))
   else:
     print('Usage: rps.py [num_plays]')
+
+#from cs22_help chan
+    """
+    [“rock”]
+    [“rock”, “rock”]
+        [“rock”, “rock”, “rock”]
+            --> go as many layers as you want
+        [“rock”, “rock”, “paper”]
+            --> go as many layers as you want
+        [“rock”, “rock”, “scissors”]
+            --> go as many layers as you want
+    [“rock”, “paper”]
+        [“rock”, “paper”, “rock”]
+        [“rock”, “paper”, “paper”]
+        [“rock”, “paper”, “scissors”]
+    [“rock”, “scissors”]
+        [“rock”, “scissors”, “rock”]
+        [“rock”, “scissors”, “paper”]
+        [“rock”, “scissors”, “scissors”]
+[“paper”]
+    …etc
+[“scissors”]
+    …etc
+"""
