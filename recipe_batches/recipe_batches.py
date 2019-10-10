@@ -35,10 +35,12 @@ def recipe_batches(recipe, ingredients):
       batches = ingredients[key] / value
       print(f"batches: {batches}")
       if batches < 1:
-        can_make = 0
+        return 0
       else:
         can_make += 1
       return can_make
+      # assertion error on the test. need to do a return of some sort if 0 batches can be made?
+      #this is the wrong comparison. It's returning the wrong math on just one entry. 100/132 is 1.32 which is what batches turns out to be.
 if __name__ == '__main__':
   # Change the entries of these dictionaries to test 
   # your implementation with different inputs
