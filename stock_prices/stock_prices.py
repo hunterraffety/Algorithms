@@ -3,7 +3,25 @@
 import argparse
 
 def find_max_profit(prices):
-  pass
+  # max profit so far by default is going to be the first buy
+  # you're able to make.
+  max_profit_so_far = prices[1] - prices[0]
+  # for x in prices:
+  #   print(x)
+  # need to begin a loop to iterate through prices
+  for i in range(len(prices) - 1):
+    #print(f"prices: outer {prices[i]}")
+    #begin second loop to begin calculations
+    for j in range(i + 1, len(prices)): # offset by one for new loop
+      #print(f"prices: inner i {prices[i]}, inner j {prices[j]}")
+      #seems like nested loops are confusing.
+      max_profit = prices[j] - prices[i] #this loops through and subtracts i from j
+      print(max_profit)
+      if max_profit > max_profit_so_far:
+        #print(f"max_profit updates: {max_profit}")
+        max_profit_so_far = max_profit #this works because it iterates through the inner loop and updates the maximum amount of profit until no other value can set that value higher than max_profit_so_far, then returns it
+  return max_profit_so_far
+print(find_max_profit([1050, 270, 1540, 3800, 2]))
 
 
 if __name__ == '__main__':
